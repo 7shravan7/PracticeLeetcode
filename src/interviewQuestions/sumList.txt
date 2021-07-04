@@ -1,0 +1,102 @@
+ *******************************************************************************************
+ #     	Leetcode#	Name                           				: Difficulty :  Solved Date
+ *******************************************************************************************
+ 1. 	1			Two Sum                        				: Easy       : 26 April 2021
+ 2. 	1041		Robot Bounded In Circle        				: Medium     : 26 April 2021
+ 3. 	146			LRUCache (Design q)					   		: Medium     : 27 April 2021
+ 4. 	200			Number of Islands			   				: Medium     : 27 April 2021
+ 5. 	56			Merge Intervals                				: Medium     : 28 April 2021
+ 6. 	42			Trapping Rain Water	           				: Hard       : 28 April 2021
+ 7. 	68			Text Justification             				: Hard       : 29 April 2021
+ 8. 	121			Best Time to buy & sell stock  				: Easy       : 30 April 2021
+ 9. 	2			Add Two Numbers(Linked List)   				: Medium     : 30 April 2021
+ 10.    1396		Design Underground System(Design q) 		: Medium     : 30 April 2021
+ 11.	91			Decode Ways                         		: Medium     : 30 April 2021
+ 12.    3			LongestSubstringWithoutRepeatingCharacters  : Medium     : 01 May   2021
+ 13.    238			Product of Array Except Self  				: Medium     : 01 May   2021
+ 14.    20			Valid Paranthesis  							: Easy     	 : 01 May   2021
+ 15.    973			K Closest Points to Origin      			: Medium     : 02 May   2021
+ 16.    588(*)		Design In-Memory File System (Design q)     : Hard       : 03 May   2021
+ 17.    829         Consecutive Numbers Sum                     : Hard       : 03 May   2021
+ 18.    1465        MaxArea of Piece of Cake after Hor&Vert Cuts: Medium     : 03 May   2021
+ 19.    253(*)		Meeting Rooms II							: Medium     : 03 May   2021
+ 20.    295 		Find Median from Data Stream                : Hard     	 : 04 May   2021
+ 21.    ***         Heap Implementation (Manual)                : ***     	 : 05 May   2021
+ 22.    380			Insert Delete GetRandom O(1)                : Medium     : 05 May   2021
+ 23.    1330        Minimum Difficulty of a Job Schedule        : Hard       : 05 May   2021
+ 24.    4			Median of Two Sorted Arrays	 				: Hard		 : 06 May   2021
+ 25.    206         Reverse Linked List                         : Easy       : 09 May   2021
+ 26.    953 		Verifying an Alien Dictionary				: Easy       : 10 May   2021
+ 27.    273		    Integer to English Words                    : Hard       : 10 May   2021
+ 28.    5			Longest Palindromic Substring				: Medium     : 10 May   2021
+ 29.	224			Basic Calculator							: Hard       : 12 May   2021
+ 30.    1249		Minimum Remove to Make Valid Parentheses    : Medium     : 14 May   2021
+ 31.	7			Reverse Integer								: Easy       : 17 May   2021
+ 32.    981 		Time Based Key-Value Store (Design q)		: Medium     : 17 May   2021
+ 33.	15          3 Sum          								: Medium     : 18 May   2021
+ 34.    415 		Add Strings									: Easy       : 18 May   2021
+ 35.    23			Merge k Sorted Lists						: Hard       : 18 May   2021
+ 36.    31          Next Permutation							: Medium     : 19 May   2021
+ 37.	1348 		Tweet Counts Per Frequency					: Medium     : 19 May   2021
+ 38.    127 		Word Ladder									: Hard       : 20 May   2021
+ 39.    215		    Kth Largest Element in an Array				: Medium     : 20 May   2021
+ 40.    53 			Maximum Subarray							: Easy       : 20 May   2021
+ 41.    49          Group Anagrams								: Medium     : 21 May   2021
+ 42.    1010		PairsofSongs With Total Durations Div by 60 : Medium     : 21 May   2021
+ 43.    528 		Random Pick with Weight						: Medium     : 21 May   2021
+ 44.    695			Max Area of Island							: Medium     : 21 May   2021
+ 45.    41 			First Missing Positive						: Hard       : 21 May   2021
+ 46.    33 			Search in Rotated Sorted Array				: Medium     : 21 May   2021
+ 47.    759(*)		Employee Free Time							: Hard       : 22 May   2021
+ 48.    443			String Compression							: Medium     : 22 May   2021
+ 49.    1209        Remove All Adjacent Duplicates in String II : Medium     : 23 May   2021
+ 50.    139			Word Break									: Medium     : 24 May   2021
+ 51.    17			Letter Combinations of a Phone Number	 	: Medium     : 24 May   2021
+ 52.    811			Subdomain Visit Count						: Easy     	 : 24 May   2021
+ 53.    22			Generate Parentheses						: Medium     : 25 May   2021
+ 54.	221			Maximal Square								: Medium     : 25 May   2021
+ 55.    269(*)		Alien Dictionary							: Hard     	 : 26 May   2021
+ 56.    696			Count Binary Substrings						: Easy     	 : 26 May   2021
+ 57.    11			Container With Most Water					: Medium     : 27 May   2021
+ 58.    937			Reorder Data in Log Files					: Easy     	 : 27 May   2021
+ 59.    14			Longest Common Prefix						: Easy     	 : 28 May   2021
+ 60.	680			Valid Palindrome II							: Easy     	 : 28 May   2021
+ 61.    1448		Count Good Nodes in Binary Tree				: Medium     : 29 May   2021
+ 62.    739			Daily Temperatures							: Medium     : 29 May   2021
+ 63.    1235		Maximum Profit in Job Scheduling			: Hard     	 : 30 May   2021
+ 64.    54			Spiral Matrix								: Medium     : 30 May   2021
+ 65.    48			Rotate Image								: Medium     : 31 May   2021
+ 66.    239			Sliding Window Maximum						: Hard     	 : 31 May   2021
+ 67.	198			House Robber								: Medium     : 31 May   2021
+ 68.    740			Delete and Earn								: Medium     : 31 May   2021
+ 69.    297 		Serialize and Deserialize Binary Tree		: Hard     	 : 01 June  2021
+ 70.	256(*)		Paint House									: Medium     : 01 June  2021
+ 71.    88			Merge Sorted Array							: Easy     	 : 01 June  2021
+ 72.	210			Course Schedule II							: Medium     : 02 June  2021
+ 73.    97			Interleaving String							: Medium     : 02 June  2021
+ 74.    1569        No of Ways to Reorder Array to Get Same BST : Hard     	 : 03 June  2021
+ 75.    752			Open the Lock								: Medium     : 04 June  2021
+ 76.	227			Basic Calculator II							: Medium     : 05 June  2021
+ 77.    1383		Maximum Performance of a Team				: Hard     	 : 05 June  2021
+ 78.	128			Longest Consecutive Sequence				: Medium     : 06 June  2021
+ 79.    394			Decode String								: Medium     : 06 June  2021
+ 80.	236			Lowest Common Ancestor of a Binary Tree		: Medium     : 06 June  2021
+ 81.    746			Min Cost Climbing Stairs					: Easy     	 : 07 June  2021
+ 83.	124			Binary Tree Maximum Path Sum				: Hard     	 : 08 June  2021
+ 84.    105			Construct BT from Preorder&Inorder Traversal: Medium     : 08 June  2021
+ 85.	490(*)      The Maze									: Medium     : 08 June  2021
+ 86.	1696		Jump Game VI								: Medium     : 09 June  2021
+ 87.	72			Edit Distance (Levenshtein distance)		: Hard     	 : 12 June  2021
+ 88.    ***			Edit Distance2(Damerau–Levenshtein distance): Hard     	 : 13 June  2021
+ 89.	1143		Longest Common Subsequence					: Medium     : 14 June  2021
+ 90.    1151(*) 	Minimum Swaps to Group All 1's Together		: Medium     : 14 June  2021
+ 91.    208			Implement Trie (Prefix Tree)				: Medium     : 15 June  2021
+ 92.    226			Invert Binary Tree							: Easy     	 : 16 June  2021
+ 93.    286			Walls and Gates								: Medium     : 16 June  2021
+ 94.    990			Satisfiability of Equality Equations		: Medium     : 23 June  2021
+ 95.    1439		Kth Smallest Sum of Matrix With SortedRows	: Hard     	 : 25 June  2021
+ 96.    366			Find Leaves of Binary Tree					: Medium     : 26 June  2021
+ 97.    337			House Robber III							: Medium     : 27 June  2021
+ 98.	329			Longest Increasing Path in a Matrix			: Hard     	 : 27 June  2021
+ 99.	64			Minimum Path Sum							: Medium     : 27 June  2021
+ 100.   895			Maximum Frequency Stack						: Hard     	 : 27 June  2021
