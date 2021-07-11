@@ -100,3 +100,9 @@
  98.	329			Longest Increasing Path in a Matrix			: Hard     	 : 27 June  2021
  99.	64			Minimum Path Sum							: Medium     : 27 June  2021
  100.   895			Maximum Frequency Stack						: Hard     	 : 27 June  2021
+ 101.   errichto	No of Rectangles formed by given points  	: Hard     	 :  5 July  2021
+ 102.   460 		LFU Cache  									: Hard     	 :  7 July  2021
+ 103.  	212		    Word Search II								: Hard     	 :  8 July  2021
+ 104.   gfg         Print all k-sum paths in a binary tree      : Hard       : TODO
+ 105.   863			All Nodes Distance K in Binary Tree			: Medium     : TODO
+ 106.   75			Sort Colors									: Medium     : TODO 

@@ -1,11 +1,8 @@
 package dp.cci_book;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 public class RobotInGrid {
@@ -46,11 +43,11 @@ public class RobotInGrid {
 		if(i<0 || j<0) {
 			return 0;
 		}
-		int topStep = uniquePathsWithObsRecur(obstacleGrid, i-1,j);
-		int leftStep = uniquePathsWithObsRecur(obstacleGrid, i, j-1);
 		if(i==0 && j==0 && obstacleGrid[i][j]==0) {
 			return 1;
 		}
+		int topStep = uniquePathsWithObsRecur(obstacleGrid, i-1,j);
+		int leftStep = uniquePathsWithObsRecur(obstacleGrid, i, j-1);
 		if(obstacleGrid[i][j]==0) {
 			return topStep+leftStep;
 		} else {

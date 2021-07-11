@@ -3,12 +3,12 @@ package dp.cci_book;
  * 70. Climbing Stairs
  * You are climbing a staircase. It takes n steps to reach the top.
  * Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
- * **** Here we are generalysing the solution given n and step array as parameters ***(Daily coding questions)
+ * **** Here we are generalizing the solution given n and step array as parameters ***(Daily coding questions)
  */
 public class ClimbingStairs {
 
 	/*
-	 * this problem resembles fibonacci series when we write recurive function
+	 * this problem resembles fibonacci series when we write recursive function
 	 * f(n) = f(n-1) + f(n-2) + ...(based on the step array values)
 	 * if stepArray is {1,3,5} and n is 5 ,then equation is 
 	 * f(n)=f(n-1)+f(n-3)+f(n-5)

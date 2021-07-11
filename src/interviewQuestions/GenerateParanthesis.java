@@ -25,7 +25,7 @@ import java.util.Set;
 public class GenerateParanthesis {
 	
 	// Time : 22ms
-	// Time & Space Complexity : O(4^n/sqrt(n))
+	// Time & Space Complexity : O(4^n/sqrt(n))  catalan numbers
 	public List<String> generateParenthesisBFS(int n) {
 		List<String> resultList = new ArrayList<>();
 		Set<String> resultSet = new HashSet<>();
@@ -54,7 +54,7 @@ public class GenerateParanthesis {
 	
 	/*
 	 * Time : 0ms
-	 * Time & Space Complexity : O(4^n/sqrt(n))
+	 * Time & Space Complexity : O(4^n/sqrt(n))   catalan numbers
 	 * 
 	 * Why it is more efficient from prev method is that it wont have duplicates of combinations since we are 
 	 * adding left and right parenthesis at each index of string and we never repeat index so each string is

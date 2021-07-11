@@ -20,7 +20,7 @@ public class TowersofHanoi {
 
 	public static void main(String[] args) {
 		TowersofHanoi towersOfHanoi = new TowersofHanoi();
-		int noOfDiscs = 7;
+		int noOfDiscs = 4;
 		towersOfHanoi.solveTowersOfHanoi(noOfDiscs);
 	}
 

@@ -2,6 +2,7 @@ package dp.cci_book;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class EightQueens {
 	
@@ -13,18 +14,24 @@ public class EightQueens {
 		return;
 	}
 	
-	private void placeQueen(int rowIndex, List<Integer> placedColumnIndexList, int noOfQueens,
+	private boolean placeQueen(int rowIndex, List<Integer> placedColumnIndexList, int noOfQueens,
 			List<List<Integer>> solutionList) {
 		if(rowIndex == noOfQueens) {
 			solutionList.add(new ArrayList<Integer>(placedColumnIndexList));
+			return true;
 		} else {
 			for(int col=0;col<noOfQueens;col++) {
 				placedColumnIndexList.add(col);
 				if(isAllowedColumnIndex(placedColumnIndexList)) {
-					placeQueen(rowIndex+1, placedColumnIndexList, noOfQueens, solutionList);
+					boolean res = placeQueen(rowIndex+1, placedColumnIndexList, noOfQueens, solutionList);
+					// to find a solution
+					/*if(res) {
+						break;
+					}*/
 				}
 				placedColumnIndexList.remove(placedColumnIndexList.size()-1);
 			}
+			return false;
 		}
 	}
 
@@ -34,7 +41,9 @@ public class EightQueens {
 		for(int rowIndex=0;rowIndex<currRowIndex;rowIndex++) {
 			int colIndex = placedColumnIndexList.get(rowIndex);
 			int diff = Math.abs(currColIndex-colIndex);
-			if(diff==0 || diff == currRowIndex-rowIndex) {
+			// if diff==0 ,same col
+			// if Math.abs(row1-row2) == Math.abs(col1-col2), diagonal
+			if(diff==0 || diff == currRowIndex-rowIndex) { 
 				return false;
 			}
 		}
@@ -43,6 +52,7 @@ public class EightQueens {
 	
 	public void printAllSolutions(List<List<Integer>> solutionsList, int noOfQueens) {
 		System.out.println("No of ways we can place "+noOfQueens +" queens : "+solutionsList.size());
+		AtomicInteger i = new AtomicInteger(1);
 		solutionsList.forEach(solutionList->{
 			int[][] chessBoard = new int[noOfQueens][noOfQueens];
 			for(int row=0;row<noOfQueens;row++) {
@@ -55,12 +65,12 @@ public class EightQueens {
 					}
 				}
 			}
-			printChessBoard(chessBoard);
+			printChessBoard(chessBoard, i.getAndIncrement());
 		});
 	}
 
-	private void printChessBoard(int[][] chessBoard) {
-		System.out.println("---- solution ---");
+	private void printChessBoard(int[][] chessBoard, int i) {
+		System.out.println("---- solution "+i+"---");
 		for(int row=0;row<chessBoard.length;row++) {
 			for(int col=0;col<chessBoard[0].length;col++) {
 				System.out.print(chessBoard[row][col]+" ");
@@ -71,7 +81,7 @@ public class EightQueens {
 
 	public static void main(String[] args) {
 		EightQueens eightQueens = new EightQueens();
-		eightQueens.eightQueensWay(5);
+		eightQueens.eightQueensWay(4);
 	}
 
 }

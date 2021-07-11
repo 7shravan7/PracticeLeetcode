@@ -1,11 +1,9 @@
 package interviewQuestions;
 
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.Set;
 
 /* **MEDIUM**  139. Word Break
  * Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a 

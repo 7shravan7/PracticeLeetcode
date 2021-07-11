@@ -36,25 +36,25 @@ public class PaintFill {
 	}
 	
 	private void fillPaintBfs(int[][] arr, int rowIndex, int colIndex, int orginalColor, int newColor) {
-		Queue<Map.Entry<Integer, Integer>> queue = new LinkedList<>();
-		queue.add(new AbstractMap.SimpleEntry<Integer, Integer>(rowIndex, colIndex));
+		Queue<int[]> queue = new LinkedList<>();
+		queue.add(new int[] {rowIndex, colIndex});
 		while(!queue.isEmpty()) {
-			Map.Entry<Integer, Integer> points = queue.poll();
-			int row = points.getKey();
-			int col = points.getValue();
+			int[] points = queue.poll();
+			int row = points[0];
+			int col = points[1];
 			if(arr[row][col] == orginalColor) {
 				arr[row][col] = newColor;
 				if(row-1>=0) {
-					queue.add(new AbstractMap.SimpleEntry<Integer, Integer>(row-1, col));
+					queue.add(new int[] {row-1, col});
 				}
 				if(row+1<arr.length) {
-					queue.add(new AbstractMap.SimpleEntry<Integer, Integer>(row+1, col));
+					queue.add(new int[] {row+1, col});
 				}
 				if(col-1>=0) {
-					queue.add(new AbstractMap.SimpleEntry<Integer, Integer>(row, col-1));
+					queue.add(new int[] {row, col-1});
 				}
 				if(col+1<arr[0].length) {
-					queue.add(new AbstractMap.SimpleEntry<Integer, Integer>(row, col+1));
+					queue.add(new int[] {row, col+1});
 				}
 			}
 		}

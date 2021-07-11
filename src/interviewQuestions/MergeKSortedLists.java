@@ -37,7 +37,10 @@ import java.util.PriorityQueue;
 		The sum of lists[i].length won't exceed 10^4.
  */
 public class MergeKSortedLists {
-
+	
+	/*
+	 * Time complexity : nlogn (Brute force)
+	 */
 	public ListNode mergeKLists1(ListNode[] lists) {
 		PriorityQueue<ListNode> minHeap = new PriorityQueue<>((a,b)->a.val-b.val);
 		ListNode resultNodeHead = new ListNode(0);
@@ -58,6 +61,10 @@ public class MergeKSortedLists {
 		return resultNodeHead.next;
 	}
 	
+	/*
+	 * Time complexity : O(nlogk) k:no of linked lists and n:no of nodes in all the linked lists
+	 * Space Complexity: O(1)
+	 */
 	public ListNode mergeKLists(ListNode[] lists) {
 		int size = lists.length;
 		return merge(lists, 0 , size-1);
