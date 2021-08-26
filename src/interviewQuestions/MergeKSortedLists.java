@@ -143,10 +143,10 @@ public class MergeKSortedLists {
 }
 
 //Definition for singly-linked list.
-class ListNode {
+class ListNode1 {
     int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    ListNode1 next;
+    ListNode1() {}
+    ListNode1(int val) { this.val = val; }
+    ListNode1(int val, ListNode1 next) { this.val = val; this.next = next; }
 }

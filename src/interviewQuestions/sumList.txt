@@ -8,7 +8,7 @@
  5. 	56			Merge Intervals                				: Medium     : 28 April 2021
  6. 	42			Trapping Rain Water	           				: Hard       : 28 April 2021
  7. 	68			Text Justification             				: Hard       : 29 April 2021
- 8. 	121			Best Time to buy & sell stock  				: Easy       : 30 April 2021
+ 8. 	121			Best Time to buy & sell stock (Multiple too): Easy       : 30 April 2021
  9. 	2			Add Two Numbers(Linked List)   				: Medium     : 30 April 2021
  10.    1396		Design Underground System(Design q) 		: Medium     : 30 April 2021
  11.	91			Decode Ways                         		: Medium     : 30 April 2021
@@ -87,7 +87,7 @@
  85.	490(*)      The Maze									: Medium     : 08 June  2021
  86.	1696		Jump Game VI								: Medium     : 09 June  2021
  87.	72			Edit Distance (Levenshtein distance)		: Hard     	 : 12 June  2021
- 88.    ***			Edit Distance2(Damerau–Levenshtein distance): Hard     	 : 13 June  2021
+ 88.    ***			Edit Distance2(Damerauï¿½Levenshtein distance): Hard     	 : 13 June  2021
  89.	1143		Longest Common Subsequence					: Medium     : 14 June  2021
  90.    1151(*) 	Minimum Swaps to Group All 1's Together		: Medium     : 14 June  2021
  91.    208			Implement Trie (Prefix Tree)				: Medium     : 15 June  2021
@@ -103,6 +103,14 @@
  101.   errichto	No of Rectangles formed by given points  	: Hard     	 :  5 July  2021
  102.   460 		LFU Cache  									: Hard     	 :  7 July  2021
  103.  	212		    Word Search II								: Hard     	 :  8 July  2021
- 104.   gfg         Print all k-sum paths in a binary tree      : Hard       : TODO
- 105.   863			All Nodes Distance K in Binary Tree			: Medium     : TODO
- 106.   75			Sort Colors									: Medium     : TODO 
+ 104.   gfg         Print all k-sum paths in a binary tree      : Hard       : 17 July  2021
+ 105.   437			Path Sum III (Almost same as 106 prev)		: Medium     : 17 July  2021
+ 106.   863			All Nodes Distance K in Binary Tree			: Medium     : 13 July  2021
+ 107.   75			Sort Colors(Dutch National flag problem)	: Medium     : 13 July  2021
+ 108.   84			Largest Rectangle in Histogram				: Medium     : 23 July 2021
+ 109.   85          Maximal Rectangle                           : Hard       : 23 July 2021
+ 110.	78			Subsets                                     : Medium     : 23 July 2021
+ 111.	300			Longest Increasing Subsequence              : Medium     : 24 July 2021
+ 112.	958			Check Completeness of a Binary Tree			: Medium     : 25 July 2021
+ 113.   106			Construct BT from Post & Inorder Traversal  : Medium     : 25 July 2021
+ 114.   951			Flip Equivalent Binary Trees				: Medium     : 18 August 2021

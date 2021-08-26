@@ -1,11 +1,6 @@
 package codes.LeetCode.may2020Challenges.week_1_1to7;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
-
-import javafx.util.Pair;
+import java.util.*;
 
 /*
  * In a binary tree, the root node is at depth 0, and children of each depth k node are at depth k+1.
@@ -34,26 +29,26 @@ public class CousinsInBinaryTree {
 		if(root.val == x || root.val == y) {
 			return false;
 		}
-		Map<Integer,Pair<Integer,TreeNode>> map = new HashMap<>();
-		Queue<Pair<TreeNode,Integer>> queue = new LinkedList<>();
-		queue.add(new Pair<TreeNode, Integer>(root, 0));
+		Map<Integer,Map.Entry<Integer,TreeNode>> map = new HashMap<>();
+		Queue<Map.Entry<TreeNode,Integer>> queue = new LinkedList<>();
+		queue.add(new AbstractMap.SimpleEntry<>(root, 0));
 		while(!queue.isEmpty()) {
-			Pair<TreeNode, Integer> pair = queue.poll();
+			Map.Entry<TreeNode, Integer> pair = queue.poll();
 			TreeNode parent = pair.getKey();
 			TreeNode leftChild = parent.left;
 			TreeNode rightChild = parent.right;
 			int level = pair.getValue() + 1;
 			if(leftChild!=null) {
 				if(leftChild.val == x || leftChild.val == y) {
-					map.put(leftChild.val, new Pair<Integer, TreeNode>(level, parent));
+					map.put(leftChild.val, new AbstractMap.SimpleEntry<Integer, TreeNode>(level, parent));
 				}
-				queue.add(new Pair<TreeNode, Integer>(leftChild, level));
+				queue.add(new AbstractMap.SimpleEntry<TreeNode, Integer>(leftChild, level));
 			}
 			if(rightChild!=null) {
 				if(rightChild.val == x || rightChild.val == y) {
-					map.put(rightChild.val, new Pair<Integer, TreeNode>(level, parent));
+					map.put(rightChild.val, new AbstractMap.SimpleEntry<Integer, TreeNode>(level, parent));
 				}
-				queue.add(new Pair<TreeNode, Integer>(rightChild, level));
+				queue.add(new AbstractMap.SimpleEntry<TreeNode, Integer>(rightChild, level));
 			}
 			if(map.containsKey(x) && map.containsKey(y)) {
 				break;

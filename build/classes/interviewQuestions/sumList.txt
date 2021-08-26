@@ -8,7 +8,7 @@
  5. 	56			Merge Intervals                				: Medium     : 28 April 2021
  6. 	42			Trapping Rain Water	           				: Hard       : 28 April 2021
  7. 	68			Text Justification             				: Hard       : 29 April 2021
- 8. 	121			Best Time to buy & sell stock  				: Easy       : 30 April 2021
+ 8. 	121			Best Time to buy & sell stock (Multiple too): Easy       : 30 April 2021
  9. 	2			Add Two Numbers(Linked List)   				: Medium     : 30 April 2021
  10.    1396		Design Underground System(Design q) 		: Medium     : 30 April 2021
  11.	91			Decode Ways                         		: Medium     : 30 April 2021
@@ -87,7 +87,7 @@
  85.	490(*)      The Maze									: Medium     : 08 June  2021
  86.	1696		Jump Game VI								: Medium     : 09 June  2021
  87.	72			Edit Distance (Levenshtein distance)		: Hard     	 : 12 June  2021
- 88.    ***			Edit Distance2(Damerau–Levenshtein distance): Hard     	 : 13 June  2021
+ 88.    ***			Edit Distance2(Damerauï¿½Levenshtein distance): Hard     	 : 13 June  2021
  89.	1143		Longest Common Subsequence					: Medium     : 14 June  2021
  90.    1151(*) 	Minimum Swaps to Group All 1's Together		: Medium     : 14 June  2021
  91.    208			Implement Trie (Prefix Tree)				: Medium     : 15 June  2021

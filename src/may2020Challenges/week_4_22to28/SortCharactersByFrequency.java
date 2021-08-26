@@ -15,7 +15,7 @@ public class SortCharactersByFrequency {
 		PriorityQueue<Character> maxHeap = new PriorityQueue<>((key1,key2)->
 			 characterFreqMap.get(key2) - characterFreqMap.get(key1)
 		);
-		maxHeap.offer(e)
+		//maxHeap.offer(e);
 		maxHeap.addAll(characterFreqMap.keySet());
 		StringBuilder sb = new StringBuilder();
 		while(!maxHeap.isEmpty()) {
