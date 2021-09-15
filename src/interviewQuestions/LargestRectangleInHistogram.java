@@ -48,7 +48,7 @@ public class LargestRectangleInHistogram {
 	public int largestRectangleArea(int[] heights) {
 		int maxArea = 0;
 		int len = heights.length;
-		Stack<Integer> stack = new Stack<Integer>();
+		Stack<Integer> stack = new Stack<>();
 		stack.push(-1); // default left limit -1 indicates no less element in left side
 		for(int i=0;i<len;i++) {
 			int height = heights[i];

@@ -61,6 +61,7 @@ public class ConsecutiveNumbersSum {
 	public int consecutiveNumbersSum(int N) {
 		int noOfWays = 0;
 		for(int i=1;(i-1)*i<2*N;i++) {
+			System.out.println(N-(((i-1)*i)/2));
 			if((N - ((i-1)*i)/2) % i == 0) {
 				System.out.println(N - ((i-1)*i)/2+":i="+i);
 				noOfWays++;

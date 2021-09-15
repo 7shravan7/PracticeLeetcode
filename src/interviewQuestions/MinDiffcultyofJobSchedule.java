@@ -1,7 +1,7 @@
 package interviewQuestions;
 
 /* **Hard**   1335. Minimum Difficulty of a Job Schedule
- * You want to schedule a list of jobs in d days. Jobs are dependent (i.e To work on the i-th job, you have to finish 
+ * You want to schedule a list of jobs in d days. Jobs are dependent (i.e. To work on the i-th job, you have to finish
  * all the jobs j where 0 <= j < i).
 
    You have to finish at least one task every day. The difficulty of a job schedule is the sum of difficulties of 
@@ -119,7 +119,7 @@ public class MinDiffcultyofJobSchedule {
 	public static void main(String[] args) {
 		MinDiffcultyofJobSchedule minDiffJobSchedule = new MinDiffcultyofJobSchedule();
 		int[] job1 = {6,5,4,3,2,1};
-		int d1=2;
+		int d1=3;
 		System.out.println("Min Difficulty of job1 is "+minDiffJobSchedule.minDifficultyBottomUp(job1, d1));
 		int[] job2 = {9,9,9};
 		int d2=4;
@@ -127,7 +127,7 @@ public class MinDiffcultyofJobSchedule {
 		int[] job3 = {1,1,1};
 		int d3=3;
 		System.out.println("Min Difficulty of job3 is "+minDiffJobSchedule.minDifficultyBottomUp(job3, d3));
-		int[] job4 = {7,1,7,1,7,1};
+		int[] job4 = {7,1,7,1,7,7};
 		int d4=3;
 		System.out.println("Min Difficulty of job4 is "+minDiffJobSchedule.minDifficultyBottomUp(job4, d4));
 		int[] job5 = {11,111,22,222,33,333,44,444};

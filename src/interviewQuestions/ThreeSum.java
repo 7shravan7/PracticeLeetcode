@@ -52,10 +52,20 @@ public class ThreeSum {
 		return new ArrayList(res);
 	}
 
+	public static void printResult(List<List<Integer>> resultList){
+		for(List<Integer> list : resultList){
+			for(int str:list){
+				System.out.print(str+" ");
+			}
+			System.out.println();
+		}
+	}
+
 	public static void main(String[] args) {
 		ThreeSum threeSum = new ThreeSum();
 		int[] nums1 = {-1,0,-1,2,-1,-4};
 		List<List<Integer>> result1 = threeSum.threeSum(nums1);
+		printResult(result1);
 	}
 
 }

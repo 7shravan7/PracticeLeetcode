@@ -34,7 +34,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	
 	/*
 	 * Time Complexity  : O(n)
-	 * Space Complexity : O(# of unqiue characters of input string)
+	 * Space Complexity : O(# of unique characters of input string)
 	 */
 	public int lengthOfLongestSubstring(String str) {
 		Map<Character, Integer> letterIndexMap = new HashMap<>();

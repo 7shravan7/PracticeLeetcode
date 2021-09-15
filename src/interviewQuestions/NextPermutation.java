@@ -50,7 +50,7 @@ public class NextPermutation {
 			int swapIndex = i-1;
 			int minIndex = i;
 			for(int j=i+1;j<size;j++) {
-				if(nums[minIndex]>=nums[j] && nums[swapIndex]<nums[j]) {
+				if(nums[minIndex]>=nums[j] && nums[swapIndex]< nums[j]) {
 					minIndex = j;
 				}
 			}

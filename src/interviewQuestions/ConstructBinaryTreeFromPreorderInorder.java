@@ -90,7 +90,7 @@ public class ConstructBinaryTreeFromPreorderInorder {
 		printTree(root2);
 	}
 	
-	public class TreeNode {
+	public static class TreeNode {
 		int val;
 		TreeNode left;
 		TreeNode right;

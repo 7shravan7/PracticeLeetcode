@@ -66,7 +66,7 @@ public class InsertDeleteRandomO1 {
     public boolean remove(int val) {
         if(map.containsKey(val)) {
         	int listIndex = map.get(val);
-        	// swap last element with this remvoing element
+        	// swap last element with this removing element
         	int lastIndex = elementsList.size()-1;
         	int lastElement = elementsList.get(lastIndex);
         	elementsList.set(listIndex, lastElement);
