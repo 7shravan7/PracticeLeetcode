@@ -46,7 +46,7 @@ public class CheckCompletenessofBinaryTree {
 	 * Use BFS to do a level order traversal,add childrens to the bfs queue,until we met the first empty node.
 	 * For a complete binary tree, there should not be any node after we met an empty one.
 	 */
-	public boolean isCompleteTree(TreeNode root) {
+	public boolean isCompleteTreeBFS(TreeNode root) {
 		Queue<TreeNode> queue = new LinkedList<>();
 		queue.add(root);
 		while(queue.peek()!=null) {         // until we encounter null node
@@ -55,10 +55,60 @@ public class CheckCompletenessofBinaryTree {
 			queue.add(node.right);
 		}
 		// after that every node should be null if it is Complete Binary Tree
-		while(!queue.isEmpty() && queue.peek()==null) {  
+		while(!queue.isEmpty() && queue.peek()==null) {
 			queue.poll();
 		}
 		return queue.isEmpty();
+	}
+
+	public boolean isCompleteTreeBFSOptimzed(TreeNode root) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        if(root == null){
+            return true;
+        }
+        queue.add(root);
+        while(true){
+            TreeNode node = queue.poll();
+            if(node.left == null){
+                if(node.right!=null){
+                    return false;
+                }
+                break;
+            }
+            queue.add(node.left);
+            if(node.right==null){
+                break;
+            }
+            queue.add(node.right);
+        }
+        while(!queue.isEmpty()){
+            TreeNode node = queue.poll();
+            if(node.left!=null || node.right!=null){
+                return false;
+            }
+        }
+        return queue.isEmpty();
+    }
+
+	int maxIndex;
+	int totalNodes;
+
+	// DFS way (Best solution)
+	public boolean isCompleteTree(TreeNode root) {
+		maxIndex = 0;
+		totalNodes = 0;
+		dfs(root, 1);
+		return totalNodes==maxIndex;
+    }
+
+	private void dfs(TreeNode node, int currIndex){
+		if(node == null){
+			return;
+		}
+		totalNodes++;
+		maxIndex = Math.max(maxIndex, currIndex);
+		dfs(node.left, currIndex*2);
+		dfs(node.right, currIndex*2+1);
 	}
 
 	public static void main(String[] args) {

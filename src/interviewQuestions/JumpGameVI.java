@@ -62,7 +62,7 @@ public class JumpGameVI {
 	}
 
 	
-	/* sliding window optimizied space
+	/* sliding window optimized space
 	 * Time Complexity : O(n)
 	 * Space Complexity: O(1)
 	 */

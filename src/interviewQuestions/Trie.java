@@ -89,7 +89,7 @@ public class Trie {
     public boolean startsWith(String prefix) {
     	TrieNode temp = getStartsWithNode(prefix);
     	if(temp == null) {
-    		return true;
+    		return false;
     	} else if(temp.isWord()){
     		return true;
     	} else {

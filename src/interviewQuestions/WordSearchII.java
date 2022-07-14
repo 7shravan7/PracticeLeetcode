@@ -7,9 +7,11 @@ import java.util.Set;
 
 /* **Hard**  212. Word Search II
  * 
- * Given an m x n board of characters and a list of strings words, return all words on the board.
+ * Given an m x n board of characters and a list of strings words, return all words on the
+   board.
 
-   Each word must be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. 
+   Each word must be constructed from letters of sequentially adjacent cells, where
+   adjacent cells are horizontally or vertically neighboring.
    The same letter cell may not be used more than once in a word.
    
    Example 1:
@@ -43,7 +45,7 @@ public class WordSearchII {
 		return !(i<0 || i>=rowSize || j<0 || j>=colSize || visited[i][j]);
 	}
 	
-	/*
+	/* 724ms
 	 * Optimzation possible by 
 	 * 1.keeping word is trie so that prefix is not needed
 	 * 2.marking the end to be false after it is processed(also we can remove the matched words from trie)
@@ -157,6 +159,87 @@ public class WordSearchII {
 		System.out.println();
 	}
 
+	/*
+		Optimized - 264ms
+	 */
+	public List<String> findWords1(char[][] board, String[] words) {
+		List<String> resultList = new ArrayList<>();
+		TrieNode1 trie = buildTrie1(words);
+		int rowSize = board.length;
+		int colSize = board[0].length;
+		for(int i=0;i<rowSize;i++){
+			for(int j=0;j<colSize;j++){
+				dfs(board, i, j, trie, "",resultList);
+			}
+		}
+		return resultList;
+	}
+
+	int[] rows1 = {-1,0,1,0};
+	int[] cols1 = {0,-1,0,1};
+
+	private void dfs(char[][] board, int i, int j, TrieNode1 parent,
+					 String prefix, List<String> resultList) {
+		if(parent == null){
+			return;
+		}
+		char ch = board[i][j];
+		prefix = prefix+ch;
+		TrieNode1 node = parent.children[ch-'a'];
+		if(node == null) {
+			return;
+		}
+		if(node.isWord){
+			resultList.add(prefix);
+			node.isWord = false;
+		}
+		board[i][j] = '#';
+		for(int k=0;k<4;k++){
+			int newRow = i + rows1[k];
+			int newCol = j + cols1[k];
+			if(newRow>=0 && newRow<board.length && newCol>=0 && newCol<board[0].length &&
+					board[newRow][newCol]!='#'){
+				dfs(board, newRow, newCol, node, prefix, resultList);
+			}
+		}
+		board[i][j] = ch;
+		if(node.isEmpty()){
+			parent.children[ch-'a'] = null;
+		}
+	}
+
+	private TrieNode1 buildTrie1(String[] words) {
+		TrieNode1 root = new TrieNode1();
+		for(String word:words){
+			TrieNode1 node = root;
+			for(Character ch:word.toCharArray()){
+				if(node.children[ch-'a']==null){
+					node.children[ch-'a'] = new TrieNode1();
+				}
+				node = node.children[ch-'a'];
+			}
+			node.isWord = true;
+		}
+		return root;
+	}
+
+	class TrieNode1 {
+		TrieNode1[] children;
+		boolean isWord;
+		public TrieNode1() {
+			children = new TrieNode1[26];
+			isWord = false;
+		}
+		public boolean isEmpty(){
+			for(int i=0;i<26;i++){
+				if(children[i]!=null){
+					return false;
+				}
+			}
+			return true;
+		}
+	}
+
 	public static void main(String[] args) {
 		WordSearchII wordSearch = new WordSearchII();
 		char[][] board1 = {{'o','a','a','n'},
@@ -164,13 +247,13 @@ public class WordSearchII {
 		    			   {'i','h','k','r'},
 		    			   {'i','f','l','v'}};
 		String[] words1 = {"oath","pea","eat","rain"};
-		List<String> wordsList1 = wordSearch.findWords(board1, words1);
+		List<String> wordsList1 = wordSearch.findWords1(board1, words1);
 		printList(wordsList1);
 		
 		char[][] board2 = {{'a','b'},
  			   			   {'c','d'}};
 		String[] words2 = {"abcb"};
-		List<String> wordsList2 = wordSearch.findWords(board2, words2);
+		List<String> wordsList2 = wordSearch.findWords1(board2, words2);
 		printList(wordsList2);
 		
 		char[][] board3 = { {'o','a','b','n'},
@@ -178,7 +261,7 @@ public class WordSearchII {
 							{'a','h','k','r'},
 							{'a','f','l','v'} };
 		String[] words3 = {"oa","oaa"};
-		List<String> wordsList3 = wordSearch.findWords(board3, words3);
+		List<String> wordsList3 = wordSearch.findWords1(board3, words3);
 		printList(wordsList3);
 	}
 

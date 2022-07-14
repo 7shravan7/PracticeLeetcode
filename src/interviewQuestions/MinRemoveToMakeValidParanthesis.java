@@ -38,7 +38,7 @@ import java.util.Stack;
 		1 <= s.length <= 10^5
 		s[i] is one of  '(' , ')' and lowercase English letters.
  */
-public class MinRemoveToMakeValidParanthesis {
+public class  MinRemoveToMakeValidParanthesis {
 
 	public String minRemoveToMakeValid(String s) {
 		Stack<Integer> stack = new Stack<>();

@@ -46,10 +46,10 @@ public class KthSmallestSumMatrixSortedRows {
 	 */
 	public int kthSmallest(int[][] mat, int k) {
 		int colVal = Math.min(k, mat[0].length);
-		PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>((a,b)->b-a);
+		PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b)->b-a);
 		maxHeap.add(0);
 		for(int[] row : mat) {
-			PriorityQueue<Integer> tempHeap = new PriorityQueue<Integer>((a,b)->b-a);
+			PriorityQueue<Integer> tempHeap = new PriorityQueue<>((a,b)->b-a);
 			for(int val: maxHeap) {
 				for(int i=0;i<colVal;i++) {
 					tempHeap.add(val+row[i]);

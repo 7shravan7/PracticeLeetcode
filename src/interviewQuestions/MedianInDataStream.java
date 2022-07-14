@@ -65,11 +65,40 @@ public class MedianInDataStream {
 
 	public static void main(String[] args) {
 		MedianInDataStream medianInDataStream = new MedianInDataStream();
-		int[] inputArr = {41, 35, 62, 5, 97, 108};
+		int[] inputArr = {41, 35, 41, 5, 97, 9};
 		for(int i=0;i<inputArr.length;i++) {
 			medianInDataStream.addNum(inputArr[i]);
 			System.out.println(medianInDataStream.findMedian());
 		}
+		System.out.println("------");
+		int[] inputArr1 = {41, 35, 62, 5, 97, 9};
+		for(int i=0;i<inputArr1.length;i++) {
+			medianInDataStream.addNum1(inputArr[i]);
+			System.out.println(medianInDataStream.findMedian1());
+		}
+
+	}
+
+	int A[] = new int[101], n = 0;
+
+	// O(1)
+	public void addNum1(int num) {
+		A[num]++;
+		n++;
+	}
+
+	// O(100) = O(1)
+	public double findMedian1() {
+
+		// find 1st median number
+		int count = 0, i = 0;
+		while (count < (n+1)/2) count += A[i++];
+
+		// find 2nd median number
+		int j = i;
+		while (count < n/2+1) count += A[j++];
+
+		return (n%2 == 1) ? i-1 : (i-1+j-1) / 2.0;
 	}
 
 }

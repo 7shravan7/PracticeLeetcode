@@ -104,7 +104,7 @@
  102.   460 		LFU Cache  									: Hard     	 :  7 July  2021
  103.  	212		    Word Search II								: Hard     	 :  8 July  2021
  104.   gfg         Print all k-sum paths in a binary tree      : Hard       : 17 July  2021
- 105.   437			Path Sum III (Almost same as 106 prev)		: Medium     : 17 July  2021
+ 105.   437			Path Sum III (Almost same as 104 prev)		: Medium     : 17 July  2021
  106.   863			All Nodes Distance K in Binary Tree			: Medium     : 13 July  2021
  107.   75			Sort Colors(Dutch National flag problem)	: Medium     : 13 July  2021
  108.   84			Largest Rectangle in Histogram				: Medium     : 23 July 2021

@@ -58,7 +58,7 @@ public class EvaluateDivision {
         }
     }
 
-    public double[] calcEquation(List<List<String>> equations, double[] values,
+    public double[] calcEquation1(List<List<String>> equations, double[] values,
                                  List<List<String>> queries) {
 
         HashMap<String, Value> gidWeight = new HashMap<>();
@@ -134,6 +134,75 @@ public class EvaluateDivision {
         }
     }
 
+    public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
+        double[] result = new double[queries.size()];
+
+        Map<String, Val> groupMap = new HashMap<>();
+        int valuesCount = 0;
+        for(List<String> equation:equations){
+            String dividend = equation.get(0);
+            String divisor = equation.get(1);
+            double quotient = values[valuesCount++];
+            union(dividend, divisor, quotient, groupMap);
+        }
+
+        int queriesCount = 0;
+        for(List<String> query:queries){
+            String dividend = query.get(0);
+            String divisor = query.get(1);
+            if(!groupMap.containsKey(dividend) ||
+                    !groupMap.containsKey(divisor)){
+                result[queriesCount++] = -1.0;
+            } else if (dividend.equals(divisor)){
+                result[queriesCount++] = 1.0;
+            } else {
+                result[queriesCount++] = getCalculatedVal(dividend, divisor, groupMap);
+            }
+        }
+
+        return result;
+    }
+
+    private double getCalculatedVal(String dividend, String divisor,Map<String, Val> groupMap) {
+        Val dividendVal = find(dividend, groupMap);
+        Val divisorVal = find(divisor, groupMap);
+        if(!dividendVal.groupId.equals(divisorVal.groupId)){
+            return -1.0;
+        }
+        return divisorVal.value/dividendVal.value;
+    }
+
+    private Val find(String value, Map<String, Val> groupMap){
+        if(!groupMap.containsKey(value)){
+            groupMap.put(value, new Val(value, 1.0));
+        }
+        Val val = groupMap.get(value);
+        if(val.groupId == value){
+            return val;
+        }
+        Val groupVal = find(val.groupId, groupMap);
+        groupMap.put(value, new Val(groupVal.groupId, groupVal.value*val.value));
+        return groupMap.get(value);
+    }
+
+    private void union(String dividend, String divisor, double quotient,Map<String, Val> groupMap) {
+        Val dividendVal = find(dividend, groupMap);
+        Val divisorVal = find(divisor, groupMap);
+        if(!dividendVal.groupId.equals(divisorVal.groupId)){
+            double newValue = divisorVal.value * quotient * dividendVal.value;
+            groupMap.put(divisor, new Val(dividendVal.groupId, newValue));
+        }
+    }
+
+    class Val {
+        String groupId;
+        Double value;
+        public Val(String groupId, Double value) {
+            this.groupId = groupId;
+            this.value = value;
+        }
+    }
+
     public static void printResult(double[] resultArr) {
         System.out.println("-----");
         for(double res : resultArr){
@@ -149,11 +218,20 @@ public class EvaluateDivision {
         equations1.add(Arrays.asList("b","c"));
         double[] values1 = {2.0, 3.0};
         List<List<String>> queries1 = new ArrayList<>();
-        queries1.add(Arrays.asList("c","a"));
+        queries1.add(Arrays.asList("a","c"));
         queries1.add(Arrays.asList("b","a"));
         queries1.add(Arrays.asList("a","e"));
         queries1.add(Arrays.asList("a","a"));
         queries1.add(Arrays.asList("x","x"));
-        printResult(evalDivision.calcEquation(equations1, values1, queries1));
+        printResult(evalDivision.calcEquation1(equations1, values1, queries1));
+        List<List<String>> equations2 = new ArrayList<>();
+        equations2.add(Arrays.asList("a","e"));
+        equations2.add(Arrays.asList("b","e"));
+        double[] values2 = {4.0, 3.0};
+        List<List<String>> queries2 = new ArrayList<>();
+        queries2.add(Arrays.asList("a","b"));
+        queries2.add(Arrays.asList("e","e"));
+        queries2.add(Arrays.asList("x","x"));
+        printResult(evalDivision.calcEquation1(equations2, values2, queries2));
     }
 }

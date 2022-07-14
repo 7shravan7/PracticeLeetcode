@@ -2,10 +2,10 @@ package interviewQuestions;
 
 import java.util.Stack;
 
-/* **Hard**   Damerau–Levenshtein distance
+/* **Hard**   Damerauï¿½Levenshtein distance
  * 
- *  Given two strings word1 and word2, return the minimum number of operations required to convert 
- *  word1 to word2.
+ *  Given two strings word1 and word2, return the minimum number of operations required to
+ *  convert word1 to word2.
 
 	You have the following three operations permitted on a word:
 		Insert a character
@@ -15,7 +15,7 @@ import java.util.Stack;
 		
 	Example 1:
 		Input: word1 = "apple", word2 = "appel"
-		Output: 2
+		Output: 1
 		Explanation: 
 			apple -> appel (swap 'l' with 'e')
 		
@@ -114,15 +114,15 @@ public class EditDistance2 {
 		EditDistance2 editDistance = new EditDistance2();
 		String word1 = "apple";
 		String word2= "appel";
-		System.out.println("Damerau–Levenshtein to convert '"+word1+"' to '"+word2 +"' : "
+		System.out.println("Damerauï¿½Levenshtein to convert '"+word1+"' to '"+word2 +"' : "
 												+editDistance.minDistance(word1, word2));
 		String word3 = "horse";
 		String word4= "hros";
-		System.out.println("Damerau–Levenshtein to convert '"+word3+"' to '"+word4 +"' : "
+		System.out.println("Damerauï¿½Levenshtein to convert '"+word3+"' to '"+word4 +"' : "
 												+editDistance.minDistance(word3, word4));
 		String word5 = "intention";
 		String word6= "execution";
-		System.out.println("Damerau–Levenshtein to convert '"+word5+"' to '"+word6 +"' : "
+		System.out.println("Damerauï¿½Levenshtein to convert '"+word5+"' to '"+word6 +"' : "
 												+editDistance.minDistance(word5, word6));
 	}
 

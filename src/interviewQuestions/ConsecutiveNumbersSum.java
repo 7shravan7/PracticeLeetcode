@@ -23,7 +23,7 @@ package interviewQuestions;
 public class ConsecutiveNumbersSum {
 
 	/* Brute Force Method
-	 * Time limit exceeeded for N=63660706
+	 * Time limit exceeded for N=63660706
 	 */
 	public int consecutiveNumbersSum1(int N) {
 		int noOfWays = 1;
@@ -61,11 +61,15 @@ public class ConsecutiveNumbersSum {
 	public int consecutiveNumbersSum(int N) {
 		int noOfWays = 0;
 		for(int i=1;(i-1)*i<2*N;i++) {
-			System.out.println(N-(((i-1)*i)/2));
+			//System.out.println(N-(((i-1)*i)/2));
 			if((N - ((i-1)*i)/2) % i == 0) {
 				System.out.println(N - ((i-1)*i)/2+":i="+i);
 				noOfWays++;
 			}
+			/*N -= i;
+			if(N%i==0){
+				noOfWays++;
+			}*/
 		}
 		return noOfWays;
 	}

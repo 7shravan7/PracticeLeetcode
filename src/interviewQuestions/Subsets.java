@@ -12,7 +12,7 @@ import java.util.List;
 	Example 1:
 		Input: nums = [1,2,3]
 		Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
-		
+
 	Example 2:
 		Input: nums = [0]
 		Output: [[],[0]]
@@ -24,6 +24,7 @@ import java.util.List;
  */
 public class Subsets {
 
+	// Both solutions are O(n*2^n) Time complexity
 	public List<List<Integer>> subsets(int[] nums) {
 		List<List<Integer>> subsetList = new ArrayList<>();
 		int totalCombinations = 1<<nums.length;
@@ -45,6 +46,26 @@ public class Subsets {
 		}
 		return subList;
 	}
+
+	public List<List<Integer>> subsetsBackTracking(int[] nums) {
+		List<List<Integer>> subsetsList = new ArrayList<>();
+		//subsetsList.add(new ArrayList<>());
+		backTrack(nums, 0, nums.length, new ArrayList<>(), subsetsList);
+		return subsetsList;
+	}
+
+	private void backTrack(int[] nums, int i, int len, List<Integer> list,
+						   List<List<Integer>> subsetsList) {
+		if(i>=len){
+			subsetsList.add(new ArrayList<>(list));
+			return;
+		}
+		list.add(nums[i]);
+		backTrack(nums, i+1, len, list, subsetsList);
+		list.remove(list.size()-1);
+		backTrack(nums, i+1,len, list, subsetsList);
+
+	}
 	
 	public static void printList(List<List<Integer>> resultList) {
 		for(List<Integer> list : resultList) {
@@ -62,11 +83,15 @@ public class Subsets {
 
 	public static void main(String[] args) {
 		Subsets subsets = new Subsets();
-		int[] nums1 = {1,2,3};
+		int[] nums1 = {1,2,3, 4};
 		printList(subsets.subsets(nums1));
-		System.out.println("-------------");
+		System.out.println("-----back track--------");
+		printList(subsets.subsetsBackTracking(nums1));
+		System.out.println("-------example 2------");
 		int[] nums2 = {0};
 		printList(subsets.subsets(nums2));
+		System.out.println("-----back track--------");
+		printList(subsets.subsetsBackTracking(nums2));
 	}
 
 }

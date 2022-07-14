@@ -6,8 +6,8 @@ import java.util.LinkedList;
 
 /* **Medium**      1151. Minimum Swaps to Group All 1's Together
  * 
- * Given a binary array data, return the minimum number of swaps required to group all 1’s present in the 
- * array together in any place in the array.
+ * Given a binary array data, return the minimum number of swaps required to group all
+ * 1s present in the array together in any place in the array.
 
 	Example 1:
 		Input: data = [1,0,1,0,1]
